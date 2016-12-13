@@ -89,7 +89,7 @@ export class RecipeEditComponent implements OnInit , OnDestroy{
   }
 
   private navigateBack(){
-     this.router.navigate(['../'])
+     this.router.navigate(['/recipes'])
   }
 
   onAddItem(name: string , amount : string){

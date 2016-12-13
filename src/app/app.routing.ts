@@ -1,16 +1,14 @@
 import { Routes , RouterModule} from '@angular/router'
 import {  ModuleWithProviders } from '@angular/core'
 
-import { RecipesComponent } from './recipes/recipes.component'
 import { ShoppingListComponent } from './shopping-list/shopping-list.component'
-
-import { RECIPE_ROUTES }  from './recipes/recipes.routes'
+import { HomeComponent } from './home.component'
 
 const APP_ROUTES : Routes = [
 
-  { path : 'recipes' , component : RecipesComponent , children: RECIPE_ROUTES},
+  { path : 'recipes' , loadChildren : 'app/recipes/recipes.module#RecipesModule'},
   { path : 'shopping-list' , component : ShoppingListComponent},
-  { path : '**' , redirectTo : '/recipes'}
+  { path : '**' , component : HomeComponent}
 
 ];
 
